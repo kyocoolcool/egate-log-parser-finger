@@ -1,0 +1,16 @@
+*顯示版本號與用法:
+ java -jar EgateLogParser.jar
+ 
+*解析資料轉出為Excel報表:
+ 方式一: java -jar EgateLogParser.jar --excel --log=<logfile>      
+ 方式二: java -jar EgateLogParser.jar --excel --v1 --log=<logfile>  //舊報表,v1只能接一個logfile
+ 方式三: java -jar EgateLogParser.jar --excel --v2 --log=<logfile>  //舊報表,v2只能接一個logfile
+ 方式四: java -jar EgateLogParser.jar -excel --log=<logfilesPath>
+ 方式六: runExcel <logfile>    //產出與方式一相同 
+ 方式五: runExcel <logfilesPath>  //產出與方式四相同
+                 
+*解析資料寫入DB
+ 方式一: java -jar EgateLogParser.jar --db --url=<ip:port> --dbName=<databaseName> --username=<db user> --password=<db password> --type=<in|out> --log=<logfilesPath>
+ 方式二: runDbin <logfilesPath>   //針對出境log寫入
+ 方式三: runDbOut <logfilesPath>  //針對入境log寫入
+ 注意: 若寫入的DB ip, userName, password不同, 請先修改runDbin.bat 與runDbout內相關參數

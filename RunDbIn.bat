@@ -1,0 +1,1 @@
+java -jar EgateLogParser.jar --db --type=in --url=10.11.10.53:1433 --dbName=MNR --username=MNR --password=!QAZ2wsx --log=%1     
